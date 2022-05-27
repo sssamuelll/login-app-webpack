@@ -10,7 +10,6 @@ import usePersistedState from './usePersistedState';
 
 const App = () => {
     
-    /*const [user, setUser] = useState({username:"", password:""});*/
     const [user, setUser] = usePersistedState('user', {'username':'', 'password':''});
     const [error, setError] = useState("");
     const [message, setMessage] = useState("");
@@ -21,13 +20,13 @@ const App = () => {
 
         setUser(user);
 
-    }
+    };
 
     const Message = e => {
 
         setMessage(e);
 
-    }
+    };
 
     const Next = e => {
 
@@ -43,25 +42,20 @@ const App = () => {
 
     const Logout = () => {
 
-        setUser({
-            username:"", email: ""
-        });
+        User({username:"", email: ""});
         Next("Login");
-        
 
     }
 
     return (
 
-        <div className='App'>
+        <div className= "app-container">
             {(user.username != "" && active != "Renew") ? (
-                <div className="welcome">
-        
+                <div>
                     {<Dashboard User = {User} user = {user} Next = {Next} Message={message} error={error} Logout={Logout}/> }
-                    
                 </div>
             ) : (
-                <div>
+                <div className= "overlay">
                     {active === "Forgot" && <ForgotPass Next = {Next} Message = {Message} error={error} />}
                     {active === "Login" && <LoginForm User = {User} Next = {Next} error={error} />}
                     {active === "Reset" && <ResetPass Reset={Reset} Next = {Next} Message={message} error={error} /> }
@@ -74,4 +68,4 @@ const App = () => {
     )
 }
 
-render(<App />, document.getElementById("root"));
+render(<App />, document.getElementById("app-container"));

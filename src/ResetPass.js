@@ -10,7 +10,7 @@ function ResetPass({ Next, Message, error }) {
 
     return (
 
-        <div>
+        <div className= "reset-login">
             <div className="overlay__inner">
                 <h1 className="overlay__title">
                     Login UX

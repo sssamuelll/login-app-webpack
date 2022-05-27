@@ -30,43 +30,47 @@ function ForgotPass({ Next, Message, error }) {
     }
 
     return (
-        <form onSubmit={submitHandler}>
-    
-            <div className="overlay__inner">
 
-                <h1 className="overlay__title">
-                    Login UX
-                </h1>
-                <p className="overlay__description">Reset Password</p>
+        <div className= "forgot-password">
+            
+            <form onSubmit={submitHandler}>
+        
+                <div className="overlay__inner">
 
-                <p>Enter the username associated with your account and we'll send an email with instructions to reset your password.</p>
+                    <h1 className="overlay__title">
+                        Login UX
+                    </h1>
+                    <p className="overlay__description">Reset Password</p>
 
-                {(error !="") ? ( <div className="error">{error}</div> ) : ""}
+                    <p>Enter the username associated with your account and we'll send an email with instructions to reset your password.</p>
 
-                <div className="overlay__form">
+                    {(error !="") ? ( <div className="error">{error}</div> ) : ""}
 
-                <div className="form-group">
-                  <label for="username">Username</label>
-                  <input type="username" className="form-control" name="username" id="username" onChange={e => setDetails({...details, username: e.target.value})} value={details.username} />
+                    <div className="overlay__form">
+
+                    <div className="form-group">
+                      <label for="username">Username</label>
+                      <input type="username" className="form-control" name="username" id="username" onChange={e => setDetails({...details, username: e.target.value})} value={details.username} />
+                    </div>
+
+
                 </div>
 
-                
-            </div>
 
+                <div className="form-group overlay__btns">
 
-            <div className="form-group overlay__btns">
+                    <button type="submit" className="overlay__btn overlay__btn--transparent">
 
-                <button type="submit" className="overlay__btn overlay__btn--transparent">
-                  
-                    Send Instructions
-                  
-                </button>
+                        Send Instructions
 
-              </div>
+                    </button>
 
-            </div>
-    
-        </form>
+                  </div>
+
+                </div>
+        
+            </form>
+        </div>
         
     )
 

@@ -39,6 +39,9 @@ function RenewPass({ User, user, Next, error }) {
     };
 
     return (
+
+    <div className= "renew-password">
+
         <form onSubmit={submitHandler}>
     
             <div className="overlay__inner">
@@ -79,6 +82,8 @@ function RenewPass({ User, user, Next, error }) {
             </div>
 
         </form>
+        
+    </div>
 
     )
 

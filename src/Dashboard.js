@@ -1,16 +1,23 @@
-import React, { useState } from "react";
+import React from "react";
+
+import AppHeader from "./AppHeader";
+import AppSidebar from "./AppSidebar";
+import Agenda from "./Agenda";
 
 function Dashboard({ User, user, Next, error, Logout }) {
     
     return(
 
-        <div>
-            <h2>Welcome, <span>{user.username}</span></h2>
-            <h1>Dashboard</h1>
-            
+        <div className= "app-container">
+            <AppHeader></AppHeader>
+            <div class="app-content">
+                <AppSidebar Logout={Logout}></AppSidebar>
+                <Agenda></Agenda>
+                
+                
+            </div>
         </div>
     )
-
 
 }
 

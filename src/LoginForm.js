@@ -58,16 +58,16 @@ function LoginForm({ User, Next, error }) {
               <label for="password">Password</label>
               <input type="password" className="form-control" name="password" id="password" onChange={e => setDetails({...details, password: e.target.value})} value={details.password} />
             </div>
-            <div className="checkbox mb-3">
-              <label>
-                <a href="" onClick={ forgetHandler }>Forgot Password</a>
-              </label>
-            </div>
           </div>
           <div className="form-group overlay__btns">
             <button type="submit" className="overlay__btn overlay__btn--transparent">
               Sign In
             </button>
+            <div className="checkbox mb-3 forgot-password">
+              <label>
+                <a href="" onClick={ forgetHandler }>Forgot Password</a>
+              </label>
+            </div>
           </div>
         </div>
       </form>

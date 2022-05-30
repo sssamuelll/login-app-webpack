@@ -2,29 +2,29 @@
 
 :root {
     --app-container: #eaebf5;
-    --main-color: #1f1c2e;
-    --hue: 250;
+    --main-color: #202022;
+    --hue: 0;
     --secondary-color: #4A4A4A;
-    --link-color: #1f1c2e;
+    --link-color: #202022;
     --link-color-hover: #c3cff4;
     --link-color-active: #fff;
-    --link-color-active-bg: #1f1c2e;
+    --link-color-active-bg: #202022;
     --agenda: #fff;
     --message-box-hover: #fafcff;
     --message-box-border: #e9ebf0;
     --more-list-bg: #fff;
     --more-list-bg-hover:  #f6fbff;
     --more-list-shadow: rgba(209, 209, 209, 0.4);
-    --button-bg: #1f1c24;
+    --button-bg: #202022;
     --search-area-bg: #fff;
     --star: #1ff1c2e;
     --message-btn: #fff;
 
-    --dark-color: hsl(var(--hue), 100%, 9%);
-    --light-color: hsl(var(--hue), 95%, 98%);
-    --base: hsl(var(--hue), 95%, 50%);
-    --complimentary1: hsl(var(--hue-complimentary1), 95%, 50%);
-    --complimentary2: hsl(var(--hue-complimentary2), 95%, 50%);
+    --dark-color: #202022
+    --light-color:  #CACACA;
+    --base: #878787;
+    --complimentary1: #878787;
+    --complimentary2: #878787;
     
     /*
     --dark-color: hsl(var(--hue), 100%, 9%);
@@ -37,8 +37,8 @@
   
     --bg-gradient: linear-gradient(
       to bottom,
-      hsl(var(--hue), 95%, 99%),
-      hsl(var(--hue), 95%, 84%)
+      #fff,
+      #cacaca
     );
   }
 
@@ -907,6 +907,10 @@ button, a {
   
   .overlay__btn-emoji {
     margin-left: 0.375rem;
+  }
+
+  .forgot-password {
+    margin: 0px 0px 0px 20px;
   }
   
   a {

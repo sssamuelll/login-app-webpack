@@ -3,6 +3,7 @@
 :root {
   --app-container: #eaebf5;
   --main-color: #1f1c2e;
+  --hue: 250;
   --secondary-color: #4A4A4A;
   --link-color: #1f1c2e;
   --link-color-hover: #c3cff4;
@@ -773,7 +774,7 @@ strong {
 }
 
 .overlay {
-  width: 60%;
+  /*width: 60%;*/
   max-width: 1140px;
   max-height: 540px;
   padding: 8rem 4rem;

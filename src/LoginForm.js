@@ -13,13 +13,7 @@ function LoginForm({ User, Next, error }) {
       
       Axios.get('https://www.zeumatic.com/ehr/rest/login.php?user='+details.username+'&passw='+md5Password,
                 {
-                  headers: {
-                    'Access-Control-Allow-Origin':'*',
-                    'Access-Control-Allow-Headers':'access',
-                    'Access-Control-Allow-Methods':'GET',
-                    'Access-Control-Allow-Credentials':'true',
-                    'Content-Type':'application/json'
-                  }
+                  
                 })
           .then(response => respHandler(response)).catch( error => console.log(error));
   }
